@@ -5,7 +5,7 @@ Home: https://quansight.github.io/ndindex/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Python library for manipulating indices of ndarrays.
 
