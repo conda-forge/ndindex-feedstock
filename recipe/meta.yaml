@@ -1,5 +1,5 @@
 {% set name = "ndindex" %}
-{% set version = "1.5.2" %}
+{% set version = "1.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e35fe1babe2d11c0b7af55b93b64f9c2725ea19a5d81c973fb8a2db5fbf3902e
+  sha256: 752e5a05c39883824316fdd7f7b650f6860eb71cecb9f15d811be2d879bebf02
 
 build:
   number: 0
@@ -21,8 +21,6 @@ requirements:
     - python >=3.6
   run:
     - python >=3.6
-    - numpy
-    - sympy
 
 test:
   imports:
