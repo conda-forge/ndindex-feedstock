@@ -1,5 +1,5 @@
 {% set name = "ndindex" %}
-{% set version = "1.8" %}
+{% set version = "1.9" %}
 
 
 package:
@@ -8,19 +8,23 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5fc87ebc784605f01dd5367374cb40e8da8f2c30988968990066c5098a7eebe8
+  sha256: 08a9208ddadba711f546647858b7ff16ce2fdd8d2e06c22ad336e28235c17e50
 
 build:
-  number: 1
-  noarch: python
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
   host:
     - pip
-    - python >=3.8
+    - python
+    - setuptools
+    - cython
   run:
-    - python >=3.8
+    - python
 
 test:
   imports:
