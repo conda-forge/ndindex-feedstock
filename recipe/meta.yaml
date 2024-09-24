@@ -1,5 +1,5 @@
 {% set name = "ndindex" %}
-{% set version = "1.8" %}
+{% set version = "1.9.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5fc87ebc784605f01dd5367374cb40e8da8f2c30988968990066c5098a7eebe8
+  sha256: b9cd9fa67044d12a8ed7b63ca7b38b45c51163962b67f133307a0cbe0721a953
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
